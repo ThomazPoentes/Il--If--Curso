@@ -1,0 +1,147 @@
+body{
+  background-color: white;
+}
+/* Section de corpo */
+#cardCentral {
+  width: 70%;
+  height: 70%;
+  margin: auto; /* Centraliza horizontalmente */
+  padding: 1.5%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+/* Section de corpo */
+
+
+/*Grid que armazena as duas colunas*/
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/*Grid que armazena as duas colunas*/
+
+
+/*div das colunas*/
+.grid-item {
+  flex: 1 1 calc(50% - 10px); /* Tamanho inicial de 50%, ajuste para evitar margens duplicadas */
+  min-height: 400px; /* Altura mínima para evitar colapso */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side {
+    margin-bottom: 20px;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+}
+/*div das colunas*/
+
+/*Div da esquerda*/
+.left-side{
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+}
+/*Div da esquerda*/
+
+/*Div da direita*/
+.right-side {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+/*Div da direita*/
+
+/*Form dentro da div da direita*/
+.form-group {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%; /* Ou uma altura específica que se adeque ao seu layout */}
+
+.form-group input[type="text"], .form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px; /* Adiciona um espaço entre o formulário e o botão */
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+.input-login {
+  margin: 2%;
+  width: 60%;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  background: black;
+  background-clip: text;
+  border-width: 2px; /* Aumentamos a espessura da borda */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.input-login:hover,
+.input-login:focus {
+  border-color: #058a05;
+  box-shadow: 0 0 0 5px rgba(255, 102, 0, #863a07);
+}
+
+.input-login::after,
+.input-login:focus {
+  border-color: #644605;
+  box-shadow: 0 0 0 5px rgba(255, 102, 0, #863a07);
+}
+
+.input-login:hover::placeholder,
+.input-login:focus::placeholder {
+  color: #928a8a;
+}
+
+img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
