@@ -1,7 +1,10 @@
-body{
+/* Estilo geral do body */
+body {
   background-color: white;
+  font-family: 'PT Serif', serif;
 }
-/* Section de corpo */
+
+/* Container principal centralizado */
 #cardCentral {
   width: 70%;
   height: 70%;
@@ -9,92 +12,70 @@ body{
   padding: 1.5%;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: 'PT Serif', serif;
+
 }
-/* Section de corpo */
 
-
-/*Grid que armazena as duas colunas*/
+/* Grid flexível para colunas */
 .grid-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-/*Grid que armazena as duas colunas*/
 
-
-/*div das colunas*/
+/* Estilo das colunas */
 .grid-item {
-  flex: 1 1 calc(50% - 10px); /* Tamanho inicial de 50%, ajuste para evitar margens duplicadas */
-  min-height: 400px; /* Altura mínima para evitar colapso */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
+  flex: 1 1 calc(50% - 10px); /* Colunas em 50% */
+  min-height: 400px; /* Altura mínima */
   padding: 20px;
   border-radius: 5px;
 }
 
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .grid-item {
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-side {
-    margin-bottom: 20px;
-  }
-
-  .right-side {
-    width: 100%;
+    flex-basis: 100%; /* Colunas em 100% em telas pequenas */
   }
 }
-/*div das colunas*/
 
-/*Div da esquerda*/
-.left-side{
+/* Div da esquerda */
+.left-side {
   min-height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
   padding: 20px;
-  border-radius: 5px;
 }
-/*Div da esquerda*/
 
-/*Div da direita*/
+/* Div da direita */
 .right-side {
   flex-grow: 1;
   padding: 20px;
   background-color: white;
   border-radius: 5px;
 }
-/*Div da direita*/
 
-/*Form dentro da div da direita*/
-.form-group {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
+/* Container do formulário */
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60%; /* Ou uma altura específica que se adeque ao seu layout */}
+  height: 60%; /* Altura do container do formulário */
+}
 
-.form-group input[type="text"], .form-group input[type="password"] {
+/* Estilos para o grupo do formulário */
+.form-group {
+  width: 100%;
+}
+
+/* Estilo dos inputs */
+.form-group input {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+/* Estilo do botão */
 .form-group button {
   background-color: #007bff;
   color: white;
@@ -102,46 +83,120 @@ body{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 15px; /* Adiciona um espaço entre o formulário e o botão */
+  margin-top: 15px; /* Espaço acima do botão */
 }
 
+/* Efeito hover no botão */
 .form-group button:hover {
-  background-color: #0056b3;
+  background-color: #108d1b;
 }
 
+/* Estilos para o input de login */
 .input-login {
   margin: 2%;
   width: 60%;
   border-radius: 10px;
   padding: 5px;
-  border: 1px solid #ccc;
-  transition: all 0.3s ease-in-out;
-  background: black;
-  background-clip: text;
-  border-width: 2px; /* Aumentamos a espessura da borda */
-  -webkit-background-clip: text;
-  color: transparent;
+  border: 2px solid #008000;
+  transition: all 0.1s ease; /* Transição suave */
+  background: white;
+  color: #1fad12; /* Cor do texto */
 }
 
+/* Estilo do placeholder */
+.input-login::placeholder {
+  color: #ad7712b7; /* Cor do placeholder */
+}
+
+/* Efeitos ao passar o mouse ou focar no input */
 .input-login:hover,
 .input-login:focus {
-  border-color: #058a05;
-  box-shadow: 0 0 0 5px rgba(255, 102, 0, #863a07);
+  border-color: #008000;
+  color: #008000; /* Cor do texto ao interagir */
 }
 
-.input-login::after,
-.input-login:focus {
-  border-color: #644605;
-  box-shadow: 0 0 0 5px rgba(255, 102, 0, #863a07);
-}
-
+/* Cor do placeholder ao interagir */
 .input-login:hover::placeholder,
 .input-login:focus::placeholder {
-  color: #928a8a;
+  color: #008000;
 }
 
+/* Sombra ao focar no input */
+.input-login:focus {
+  box-shadow: 0 0 0 5px rgba(30, 168, 18, 0.3);
+  border: none;
+}
+
+/* Estilo da imagem */
 img {
   width: 60%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+}
+
+.h3-login {
+  font-family: 'PT Serif', serif;
+  font-size: 35px; /* Ajuste o tamanho conforme necessário */
+  text-align: center; /* Centraliza o texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  background: linear-gradient(to right, #008000, #a05119); /* Verde para amarelo */
+  -webkit-background-clip: text; /* Faz o gradiente aparecer no texto */
+  -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
+}
+
+button {
+  background-color: #008000; /* Verde escuro inicial */
+  color: #FFD700; /* Cor do texto */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 65px !important;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, width 0.3s ease; /* Transições para hover */
+  animation: pulse 4s infinite; /* Pulsação mais lenta */
+}
+
+/* Efeito pulsante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #008000; /* Verde escuro */
+  }
+  50% {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    background-color: #b96d0a; /* Amarelo */
+  }
+  100% {
+    transform: scale(1);
+    background-color: #008000; /* Retorna ao verde escuro */
+  }
+}
+
+/* Efeito hover */
+button:hover {
+  animation: none; /* Para a animação de pulsação */
+  width: calc(20% + 5%); /* Aumenta a largura em 10% */
+  background-color: #a05119; /* Marrom */
+  color: #24d624; /* Verde */
+  transform: scale(1.1); /* Aumenta um pouco o tamanho */
+}
+
+.account-link {
+  font-weight: bold; /* Deixa o texto em negrito */
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  display: flex; /* Usar flexbox para alinhar o texto */
+  justify-content: center; /* Centraliza o texto */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.account-link span {
+  margin-right: 5px; /* Espaço entre as partes do texto */
+}
+
+.account-link .green {
+  color: #008000; /* Verde */
+}
+
+.account-link .brown {
+  color: #8B4513; /* Marrom */
 }

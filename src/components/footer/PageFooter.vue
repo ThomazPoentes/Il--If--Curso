@@ -1,28 +1,23 @@
 <template>
   <footer class="page-footer">
+   <section id="footer"> 
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Sobre Nós</h5>
-          <p class="grey-text text-lighten-4">Sua descrição sobre a empresa aqui.</p>
+        <div class="col-md-4">
+          <h3>Coluna 1</h3>
+          <!-- Conteúdo da primeira coluna -->
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links Úteis</h5>
-          <ul>
-            <li><a href="#!">Link 1</a></li>
-            <li><a href="#!">Link 2</a></li>
-            <li><a href="#!">Link 3</a></li>
-            <li><a href="#!">Link 4</a></li>
-          </ul>
+        <div class="col-md-4">
+          <h3>Coluna 2</h3>
+          <!-- Conteúdo da segunda coluna -->
+        </div>
+        <div class="col-md-4">
+          <h3>Coluna 3</h3>
+          <!-- Conteúdo da terceira coluna -->
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        <span>&copy; 2023 Copyright Text</span>
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-    </div>
+  </section>
   </footer>
 </template>
 
